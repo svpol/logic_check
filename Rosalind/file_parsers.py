@@ -48,3 +48,17 @@ def parse_tab_to_dict(filepath: str) -> dict:
             key, value = line.split()
             file_dict[key] = value
     return file_dict
+
+
+def parse_to_idsec_list(filepath: str) -> list:
+    idseq_list = []
+    with open(filepath) as f:
+        i = -1
+        for line in f.readlines():
+            line = line.strip()
+            if line[0] == '>':
+                i += 1
+                idseq_list.append([line[1:], ''])
+            else:
+                idseq_list[i][1] += line
+    return idseq_list

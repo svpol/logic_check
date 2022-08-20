@@ -23,5 +23,5 @@ def fib_rabbits_mortal(n, m):
 
 if __name__ == "__main__":
 
-    n, m = parse_to_str('test_data/fibonacci_rabbits_mortal.txt').split()
+    n, m = parse_to_str('test_data/fibonacci_rabbits_mortal_test.txt').split()
     print(fib_rabbits_mortal(int(n), int(m)))
