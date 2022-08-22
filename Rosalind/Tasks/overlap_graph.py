@@ -36,4 +36,3 @@ if __name__ == "__main__":
     id_seq_list = parse_to_idsec_list('test_data/overlap_graph_test.txt')
     over_graph = overlap_graph(id_seq_list)
     write_list_of_lists(over_graph, 'overlap_graph.txt')
-    

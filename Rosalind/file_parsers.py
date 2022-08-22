@@ -4,6 +4,14 @@ def parse_to_str(filepath: str) -> str:
     return file_str
 
 
+def parse_to_intlist(filepath: str) -> list:
+    with open(filepath) as f:
+        num_list = f.read().split()
+        for i in range(len(num_list)):
+            num_list[i] = int(num_list[i])
+        return num_list
+
+
 def parse_to_line_list(filepath: str) -> list:
     line_list = []
     with open(filepath) as f:
